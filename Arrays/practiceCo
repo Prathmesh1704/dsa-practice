@@ -1,0 +1,5 @@
+be in C:\dsa-practice
+git add .
+git commit -m "Added array question - question name "
+git push origin main
+//done
