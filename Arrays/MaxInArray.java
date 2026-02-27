@@ -21,6 +21,7 @@ class MaxInArray{
             
         }
         System.out.println("Maximun no in array is:"+ max);
+        sc.close();
         
 
 
