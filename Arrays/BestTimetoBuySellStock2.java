@@ -1,7 +1,14 @@
-/*121 */
+/* 122 You are given an integer array prices where prices[i] is the price of a given stock on the ith day.
+
+On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can sell and buy the stock multiple times on the same day, ensuring you never hold more than one share of the stock.
+
+Find and return the maximum profit you can achieve.
+
+ */
+
 import java.util.Scanner;
 
-public class BestTimetoBuySellStock1 {
+public class BestTimetoBuySellStock2 {
 
     public int maxProfit(int[] prices) {
         if (prices == null || prices.length == 0) {
@@ -13,15 +20,15 @@ public class BestTimetoBuySellStock1 {
         int n = prices.length;
 
         for (int i = 0; i < n; i++) {
-            if (prices[i] < buy) {
-                buy = prices[i];
-            } 
-            else if (prices[i] - buy > profit) {
-                profit = prices[i] - buy;
-            }
-        }
-        return profit;
+            if (prices[i] > buy) {
+                profit+=prices[i]-buy;
+           
+        }buy = prices[i];
+    }return profit;
+
+      
     }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -36,7 +43,7 @@ public class BestTimetoBuySellStock1 {
             prices[i] = sc.nextInt();
         }
 
-        BestTimetoBuySellStock1 obj = new BestTimetoBuySellStock1();
+        BestTimetoBuySellStock2 obj = new BestTimetoBuySellStock2();
         int result = obj.maxProfit(prices);
 
         System.out.println("Maximum Profit: " + result);
