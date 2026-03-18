@@ -63,3 +63,19 @@ class IndexOfFirstOcc {
         System.out.println("Index of first occurrence: " + result);
     }
 }
+
+
+/* Another approach
+
+
+for(i=o;i<=haystack.length-neddle.length;i++){
+    if(haystack.substring(i,1+needle.length.equals(needle))){
+       return i;
+    
+    }
+    }
+
+
+
+
+*/
