@@ -47,3 +47,70 @@ class UniquqPath {
         return memo[x][y];
     }
 }
+
+
+
+/* Time Complexity  =  2**m+n  */
+
+/* Approach 2 BottomUp 
+
+
+
+class Solution {
+    public int uniquePaths(int m, int n) {
+         int [][] dp = new int [m][n];
+        for(int i=0;i<m;i++){
+            dp[i][0] = 1;
+        }
+
+        for(int j=0;j<n;j++){
+            dp[0][j] =1;
+        }
+
+        for(int i=1;i<m;i++){
+            for(int j=1;j<n;j++){
+                dp[i][j] = dp[i-1][j] + dp[i][j-1];
+            }
+        }
+         return dp[m-1][n-1];
+    }
+   
+}
+
+ 
+Time Complexity -  O(m*n)  , Space complexity = O(m*n)
+
+*/
+
+
+/* Approach 3  - 1-D Array
+
+
+class Solution {
+    public int uniquePaths(int m, int n) {
+         int[] aboveRow = new int [n];
+         Arrays.fill(aboveRow ,1); 
+
+         for(int row = 1;row<m;row++){
+            int[] currRow= new int[n];
+            Arrays.fill(currRow,1);
+            for(int col=1;col<n;col++){
+                currRow[col] = currRow[col-1] + aboveRow[col];
+
+            }
+            aboveRow = currRow;
+
+    }
+    return aboveRow[n-1];
+   
+}
+}
+
+
+
+
+
+
+
+
+*/
