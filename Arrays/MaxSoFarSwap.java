@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MaxSoFar{
+public class MaxSoFarSwap{
 
     static int Kadanes(int []arr){
         int maxsofar=arr[0];
