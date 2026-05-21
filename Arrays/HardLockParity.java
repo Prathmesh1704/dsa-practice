@@ -12,6 +12,33 @@ public class HardLockParity {
             arr[i] = sc.nextInt();
         }
 
+        int min = Integer.MAX_VALUE;
+       
+        
+        for(int i =0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+
+                if(arr[i] == arr[j])
+                    continue;
+
+                int diff = Math.abs(arr[i] - arr[j]);
+
+                if(diff%2==0){
+                    min = Math.min(diff,min);
+                }
+
+                
+            }
+        }
+        
+        if(min==Integer.MAX_VALUE){
+            System.out.println(-1);
+        }
+
+        else
+            System.out.println(min);
+        
+
         
     }
     
