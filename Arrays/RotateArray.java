@@ -10,7 +10,7 @@ public class RotateArray {
     public void rotat(int[]nums,int k){
         int n = nums.length;
 
-        if(k>n){
+        if(k>=n){
             k=k%n;
 
         }
