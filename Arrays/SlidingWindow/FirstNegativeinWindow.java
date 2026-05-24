@@ -35,16 +35,10 @@ public class FirstNegativeinWindow {
             left++;
             }
 
-          
-
-            
-
         }
 
 
         return ;
-
-
     }
 
     public static void main(String[] args){
