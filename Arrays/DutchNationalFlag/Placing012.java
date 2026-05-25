@@ -13,7 +13,7 @@ public class Placing012 {
         int mid =0;
         int high = n-1;
 
-        for(int i=0;i<n-1;i++){
+        
             while(mid<=high){
                 if(arr[mid]==0){
                    int temp = arr[low];
@@ -34,8 +34,11 @@ public class Placing012 {
                 }        
             
             
-            }
-
+          
+            
+            
+        }
+        for(int i=0;i<n;i++){
             System.out.print(arr[i]);
         }
 
