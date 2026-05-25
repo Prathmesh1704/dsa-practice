@@ -17,14 +17,10 @@ public class LongestSubstringNoRepeat {
 
         int left = 0;
         int maxlen=Integer.MIN_VALUE;
-
-            
         
         for(int right=0;right<s.length();right++){
 
             char ch = s.charAt(right);
-
-
 
             while(set.contains(ch)){
                set.remove(s.charAt(left));
@@ -33,16 +29,9 @@ public class LongestSubstringNoRepeat {
             
             set.add(ch);
                 
-
-
-          
-
             maxlen = Math.max(maxlen,right-left+1);
 
         }
-
-
-       
         System.out.println(maxlen);
        
     }
