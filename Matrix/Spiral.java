@@ -39,13 +39,13 @@ public class Spiral {
 
             if(top<=bottom){
                 for(int i =right;i>=left;i--){
-                    System.out.print(arr[bottom][i]);
+                    System.out.print(arr[bottom][i]+ " ");
                 }bottom--;
 
             }
             if(right<=left){
                 for(int j=bottom;j>=top;j++){
-                    System.out.print(arr[left][j]);
+                    System.out.print(arr[left][j]+" ");
                 }left++;
             }
         }
